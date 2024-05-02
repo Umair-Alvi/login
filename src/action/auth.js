@@ -22,7 +22,7 @@ import {
       type: SET_AUTH_LOADING,
     });
     try {
-      const res = await fetch("http://localhost:3000/api/login", {
+      const res = await fetch("/api/login", {
         method: "POST",
         headers: {
           "Accept": "application/json",
