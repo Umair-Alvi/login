@@ -1,6 +1,6 @@
 import getAuth from '@/getAuth';
 import store from '@/store';
-import { useRouter } from 'next/router';
+import { useRouter } from 'next/navigation';
 import React, { useEffect } from 'react'; // Import useEffect for side effects
 
 const AllOrder = () => {
