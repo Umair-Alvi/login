@@ -47,7 +47,7 @@ const Login = () => {
 
   
   if (typeof window != "undefined" && isAuthenticated) {
-    router.push("/allOrder");
+    router.push("/");
   }
   return (
     <>
@@ -95,7 +95,7 @@ const Login = () => {
                         <div class="input-box">
                           <input
                             minlength="8"
-                            maxlength="15"
+                           
                             formcontrolname="password"
                             autoSave="Allow"
                         autocomplete="password" 
