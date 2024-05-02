@@ -1,18 +1,24 @@
 import getAuth from '@/getAuth';
 import store from '@/store';
-import { Router, useRouter } from 'next/router';
-import React from 'react'
+import { useRouter } from 'next/router';
+import React, { useEffect } from 'react'; // Import useEffect for side effects
 
-const allOrder = () => {
-    const state = store.getState(); // Get the current state from the Redux store
-    const isLoggedIn = getAuth(state);
+const AllOrder = () => {
     const router = useRouter();
-    if (!isLoggedIn) {
-        router.push("/login");
-    }
-  return (
-    <div>allOrder page details  </div>
-  )
+    
+    // Using useEffect to perform the redirection when the component mounts
+    useEffect(() => {
+        const state = store.getState(); // Get the current state from the Redux store
+        const isLoggedIn = getAuth(state);
+        
+        if (!isLoggedIn) {
+            router.push("/login");
+        }
+    }, []); // Empty dependency array to ensure the effect runs only once on component mount
+
+    return (
+        <div>allOrder page details</div>
+    );
 }
 
-export default allOrder
+export default AllOrder;
