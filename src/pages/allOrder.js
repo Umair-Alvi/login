@@ -11,7 +11,7 @@ const allOrder = () => {
         router.push("/login");
     }
   return (
-    <div>allOrder page </div>
+    <div>allOrder page details  </div>
   )
 }
 
